@@ -1,23 +1,38 @@
-class ProductList{
-    constructor(){
+class ProductList {
+    constructor() {
         this.goods = [];
         this._fetchProducts();
         this.render();
         this.sum = this._sumPrices();
     }
-    _fetchProducts(){
-        this.goods = [
-            {id: 1, title: 'Notebook', price: 2000},
-            {id: 2, title: 'Mouse', price: 20},
-            {id: 3, title: 'Keyboard', price: 200},
-            {id: 4, title: 'Gamepad', price: 50},
+    _fetchProducts() {
+        this.goods = [{
+                id: 1,
+                title: 'Notebook',
+                price: 2000
+            },
+            {
+                id: 2,
+                title: 'Mouse',
+                price: 20
+            },
+            {
+                id: 3,
+                title: 'Keyboard',
+                price: 200
+            },
+            {
+                id: 4,
+                title: 'Gamepad',
+                price: 50
+            },
         ];
     }
-    render(){
+    render() {
         const block = document.querySelector('.products');
-        for(let product of this.goods){
+        for (let product of this.goods) {
             const item = new ProductItem(product);
-            block.insertAdjacentHTML("beforeend",item.render());
+            block.insertAdjacentHTML("beforeend", item.render());
         }
     }
     _sumPrices() {
@@ -29,15 +44,15 @@ class ProductList{
     }
 }
 
-class ProductItem{
-    constructor(product, img='../img/computer.jpg'){
+class ProductItem {
+    constructor(product, img = '../img/computer.jpg') {
         this.title = product.title;
         this.id = product.id;
         this.price = product.price;
         this.img = img;
     }
-    render(){
-           return `<div class="product-item">
+    render() {
+        return `<div class="product-item">
                 <h3 class="product-item_title">${this.title}</h3>
                 <img src="../img/computer.jpg" class="product-item_img" width="150" height="150"></img>
                  <p class="product-item_price">Цена товара: ${this.price} &#8381;</p>
@@ -50,13 +65,19 @@ class Basket {
     constructor() {
 
     }
-    
-    clearBasket() {
 
-    } //Функция очищает корзину
-    showAllGoodsPrice() {
+    addGoods() {
 
-    } //Функция высчитывает и показывает общую стоимость добавленных товаров
+    }
+    removeGoods() {
+
+    }
+    changeGoods() {
+
+    }
+    render() {
+
+    }
 }
 
 class ShopItem {
@@ -64,17 +85,9 @@ class ShopItem {
 
     }
 
-    addInBasket() {
-
-    } //Функция добавляет товар в корзину, меняет его кол-во и цену(если добавлено больше одного товара)
-
-    deleteItemFromBasket() {
-
-    } //Функция удаляет товар из корзины или меняет кол-во и цену (если было добавлено более одного товара)
-
-    renderItem() {
-
-    } //Функция возвращает HTML разметку для товара
+    render() {
+        
+    }
 
 }
 
