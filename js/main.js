@@ -1,4 +1,4 @@
-const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+/*const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 class ProductList {
     constructor() {
@@ -117,4 +117,4 @@ class ShopItem {
 }
 
 let list = new ProductList();
-let basket = new Basket();
+let basket = new Basket();*/
