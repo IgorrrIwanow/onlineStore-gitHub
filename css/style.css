@@ -29,7 +29,7 @@ body {
     color: black;
 }
 
-.modal-btn {
+.modal-window {
     width: 500px;
     position: absolute;
     top: 50px;
@@ -38,7 +38,15 @@ body {
     color: white;
 }
 
-.modal-btn_visibility {
+.cart-item {
+    display: flex;
+}
+
+.product-bio {
+    display: flex;
+}
+
+.invisible {
     display: none;
 }
 
