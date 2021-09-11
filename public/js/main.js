@@ -48,14 +48,14 @@ const app = new Vue({
         },
     },
     mounted() {
-        this.getJson(`${API + this.cartUrl}`)
+        this.getJson(`/api/cart`)
             .then(data => {
                 for (let item of data.contents) {
                     this.cartItems.push(item);
                 }
             });
 
-        this.getJson(`${API + this.catalogUrl}`)
+        this.getJson(`/api/products`)
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
